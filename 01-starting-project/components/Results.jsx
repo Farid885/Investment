@@ -1,11 +1,9 @@
 import React from "react";
-// import calculateInvestmentResults from '../src/util/investment'
+
 import { calculateInvestmentResults, formatter } from "../src/util/investment";
 function Results({ userInput, handleChange }) {
   console.log(calculateInvestmentResults(userInput));
-
   const resultDatas = calculateInvestmentResults(userInput);
-
   const initialInvestment = resultDatas[0].valueEndOfYear - resultDatas[0].interest - resultDatas[0].annualInvestment;
   return (
     <table id="result">
